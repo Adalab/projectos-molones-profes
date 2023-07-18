@@ -1,0 +1,10 @@
+@import "./core/reset";
+@import "./layout/main";
+@import "./layout/header";
+@import "./layout/preview";
+@import "./layout/form";
+@import "./layout/footer";
+
+.hidden {
+  display: none;
+}

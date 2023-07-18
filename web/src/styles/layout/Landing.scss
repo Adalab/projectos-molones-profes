@@ -1,0 +1,56 @@
+.mainLanding {
+  background-color: #302c42;
+  min-height: 85vh;
+  &__section {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    color: white;
+  }
+  &__sectionCard {
+    margin-top: 50px;
+    .preview__autor {
+      @media (min-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.ulCard {
+  margin-top: 90px;
+  display: grid;
+  //   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+* {
+  text-decoration: none;
+}
+
+.eachCard {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px;
+  display: inline-block;
+  font-size: 18px;
+  width: 300px;
+  margin: 25px 0;
+  color: white;
+  text-align: center;
+  border: solid 2px #dbd3f8;
+  height: 43px;
+  background-color: #978bc6;
+  border-radius: 40px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(130%);
+  }
+}
