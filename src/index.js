@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const mysql = require('mysql2/promise');
 
 //creo el servidor
@@ -9,7 +10,7 @@ const server = express();
 server.use(cors());
 server.use(express.json({ limit: '100mb' }));
 server.set('view engine', 'ejs');
-
+dotenv.config();
 /*
 mysql
   .createConnection({
@@ -28,10 +29,10 @@ mysql
 
 async function connectDB() {
   const connection = await mysql.createConnection({
-    host: 'sql.freedb.tech',
-    database: 'freedb_projectMolones',
-    user: 'freedb_adminMolon',
-    password: '9wkd##&D@va8rUr',
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    user: process.env.USERMOLON,
+    password: process.env.PASS,
   });
   await connection.connect();
   console.log(`Conexion establecida ${connection.threadId}`);
@@ -100,3 +101,5 @@ server.get('/project/:idProject', async (req, res) => {
 
   res.render('detailProject', results[0]);
 });
+
+server.use(express.static('./src/public'));

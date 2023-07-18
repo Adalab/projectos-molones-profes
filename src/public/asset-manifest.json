@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.cc4d1d9b.css",
+    "main.js": "./static/js/main.863b4372.js",
+    "static/media/project.jpg": "./static/media/project.201bbd6984b9df7e7c69.jpg",
+    "static/media/secretaria.png": "./static/media/secretaria.2f2515f606b68b6f43a8.png",
+    "index.html": "./index.html",
+    "main.cc4d1d9b.css.map": "./static/css/main.cc4d1d9b.css.map",
+    "main.863b4372.js.map": "./static/js/main.863b4372.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc4d1d9b.css",
+    "static/js/main.863b4372.js"
+  ]
+}
